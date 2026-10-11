@@ -87,7 +87,9 @@ nav {
 .sec-label::before { content:''; display:inline-block; width:28px; height:1px; background:var(--nc); }
 .sec-title { font-family:'Syne',sans-serif; font-size:clamp(1.9rem,3.8vw,2.9rem); font-weight:800; letter-spacing:-0.02em; line-height:1.1; margin-bottom:2.8rem; color:var(--tp); }
 /* ABOUT */
-.about-grid { display:grid; grid-template-columns:1.1fr 0.9fr; gap:3.5rem; align-items:start; }
+.about-grid { display:grid; grid-template-columns:0.8fr 1.1fr 1.05fr; gap:2.6rem; align-items:start; }
+.about-photo-wrap { padding:6px; border-radius:22px; background:linear-gradient(135deg,var(--nc),var(--np)); box-shadow:0 20px 55px rgba(0,0,0,0.5); }
+.about-photo { width:100%; display:block; border-radius:16px; object-fit:cover; }
 .about-bio { font-size:0.97rem; color:var(--ts); line-height:1.85; margin-bottom:1.4rem; }
 .about-bio strong { color:var(--nc); font-weight:500; }
 .info-chips { display:flex; flex-wrap:wrap; gap:0.6rem; margin-top:1.5rem; }
@@ -232,6 +234,7 @@ footer span { color:var(--nc); }
   .hero,.sec { padding:5rem 1.5rem; } .hero { flex-direction:column; padding-top:8rem; text-align:center; }
   .hero-right { display:none; }
   .about-grid,.exp-grid,.form-row { grid-template-columns:1fr; }
+  .about-photo-wrap { max-width:320px; margin:0 auto 0.5rem; }
 }
 </style>
 </head>
@@ -283,6 +286,9 @@ footer span { color:var(--nc); }
   <div class="sec-label">01 &mdash; about</div>
   <h2 class="sec-title">Who I Am</h2>
   <div class="about-grid reveal">
+    <div class="about-photo-wrap">
+      <img class="about-photo" src="about.jpg" alt="Rezvy Nakib">
+    </div>
     <div>
       <p class="about-bio">
         I am a passionate <strong>Computer Science and Engineering</strong> student at <strong>American International University-Bangladesh (AIUB)</strong>, majoring in Software Engineering.
