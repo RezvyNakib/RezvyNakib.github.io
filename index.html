@@ -140,6 +140,16 @@ nav {
 .proj-desc { font-size:0.83rem; color:var(--ts); line-height:1.72; margin-bottom:1.4rem; }
 .tech-stack { display:flex; flex-wrap:wrap; gap:0.4rem; }
 .tech-tag { font-family:'Fira Code',monospace; font-size:0.62rem; padding:0.22rem 0.6rem; border-radius:4px; background:rgba(76,201,240,0.07); border:1px solid rgba(76,201,240,0.18); color:var(--nb); letter-spacing:0.04em; }
+.proj-link { display:inline-flex; align-items:center; gap:0.45rem; margin-top:1.2rem; font-family:'Fira Code',monospace; font-size:0.72rem; color:var(--nc); text-decoration:none; border:1px solid rgba(0,245,212,0.3); background:rgba(0,245,212,0.06); padding:0.5rem 1.05rem; border-radius:8px; letter-spacing:0.04em; transition:all 0.3s; }
+.proj-link:hover { background:rgba(0,245,212,0.14); border-color:var(--nc); transform:translateY(-2px); }
+.proj-link svg { transition:transform 0.3s; }
+.proj-link:hover svg { transform:translateX(3px); }
+.proj-featured { grid-column:1 / -1; display:grid; grid-template-columns:1fr 1.05fr; gap:2.2rem; align-items:center; }
+.proj-featured .proj-desc { max-width:520px; }
+.proj-video-label { font-family:'Fira Code',monospace; font-size:0.68rem; color:var(--np); letter-spacing:0.1em; margin:0 0 0.8rem; display:flex; align-items:center; gap:0.5rem; }
+.proj-video-label::before { content:''; display:inline-block; width:16px; height:1px; background:var(--np); }
+.proj-video { position:relative; width:100%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; border:1px solid var(--gbd); background:#000; box-shadow:0 12px 40px rgba(0,0,0,0.45); }
+.proj-video iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
 /* EXPERIENCE */
 .exp-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:2.5rem; }
 .exp-card { background:var(--gb); border:1px solid var(--gbd); border-radius:16px; padding:1.8rem; transition:all 0.3s; }
@@ -235,6 +245,7 @@ footer span { color:var(--nc); }
   .hero-right { display:none; }
   .about-grid,.exp-grid,.form-row { grid-template-columns:1fr; }
   .about-photo-wrap { max-width:320px; margin:0 auto 0.5rem; }
+  .proj-featured { grid-template-columns:1fr; }
 }
 </style>
 </head>
@@ -409,6 +420,10 @@ footer span { color:var(--nc); }
         <span class="tech-tag">OpenGL</span>
         <span class="tech-tag">GLUT Library</span>
       </div>
+      <a href="https://github.com/RezvyNakib/Graphics-Project" target="_blank" rel="noopener" class="proj-link">
+        Explore Project
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
     </div>
 
     <div class="proj-card reveal" style="transition-delay:.2s">
@@ -433,6 +448,31 @@ footer span { color:var(--nc); }
         <span class="tech-tag">CSS</span>
         <span class="tech-tag">JavaScript</span>
         <span class="tech-tag">PHP</span>
+      </div>
+    </div>
+
+    <div class="proj-card proj-featured reveal" style="transition-delay:.4s">
+      <div>
+        <p class="proj-num">proj_05</p>
+        <span class="proj-role-badge">Database Developer</span>
+        <h3 class="proj-title">Advanced DBMS &mdash; Student Exchange Program Management System</h3>
+        <p class="proj-desc">An Advanced Database Management System project built with Python Flask and SQLite. It provides separate Student, Coordinator, and University panels to register, apply for, and approve exchange program applications end-to-end.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">Python Flask</span>
+          <span class="tech-tag">SQLite</span>
+          <span class="tech-tag">SQL</span>
+          <span class="tech-tag">HTML / CSS</span>
+        </div>
+        <a href="https://github.com/RezvyNakib/Advance-Database-Project-Work" target="_blank" rel="noopener" class="proj-link">
+          View Project
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div>
+        <p class="proj-video-label">project_demo</p>
+        <div class="proj-video">
+          <iframe src="https://drive.google.com/file/d/1MBMnoVqY5-0Jm4HIurV9fGiSLZgcB_mc/preview" allow="autoplay; fullscreen" allowfullscreen loading="lazy" title="Student Exchange Program Management System demo"></iframe>
+        </div>
       </div>
     </div>
 
