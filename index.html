@@ -178,6 +178,13 @@ nav {
 .club-photo { width:100%; aspect-ratio:4/3; border-radius:12px; overflow:hidden; border:1px solid var(--gbd); margin-bottom:1rem; background:var(--gb); }
 .club-photo img { width:100%; height:100%; object-fit:cover; object-position:center 30%; display:block; transition:transform 0.4s; }
 .club-card:hover .club-photo img { transform:scale(1.05); }
+  .club-photo { position:relative; }
+  .club-slider { aspect-ratio:16/9; }
+  .slide { position:absolute; inset:0; opacity:0; animation:slideFade 10s infinite; }
+  .slide:nth-child(2) { animation-name:slideFade2; }
+  .slide:nth-child(1) { animation-name:slideFade1; }
+  @keyframes slideFade1 { 0%,45% {opacity:1} 55%,95% {opacity:0} 100% {opacity:1} }
+  @keyframes slideFade2 { 0%,45% {opacity:0} 55%,95% {opacity:1} 100% {opacity:0} }
 .club-title { font-family:'Syne',sans-serif; font-size:0.95rem; font-weight:700; color:var(--tp); margin-bottom:0.35rem; }
 .club-desc { font-size:0.8rem; color:var(--ts); line-height:1.65; }
 .conference-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1.5rem; }
@@ -272,8 +279,8 @@ footer span { color:var(--nc); }
     <li><a href="#skills">skills</a></li>
     <li><a href="#projects">projects</a></li>
     <li><a href="#experience">experience</a></li>
-    <li><a href="#clubs">clubs</a></li>
-    <li><a href="#program">program</a></li>
+    <li><a href="#clubs">extracurricular</a></li>
+    <li><a href="#program">university</a></li>
     <li><a href="#contact">contact</a></li>
   </ul>
 </nav>
@@ -553,8 +560,8 @@ footer span { color:var(--nc); }
 
 <!-- CLUB ACTIVITIES -->
 <section class="sec" id="clubs">
-  <div class="sec-label">05 &mdash; club activities</div>
-  <h2 class="sec-title">Club Activities</h2>
+  <div class="sec-label">05 &mdash; extracurricular activities</div>
+  <h2 class="sec-title">Extracurricular Activities</h2>
   <div class="club-grid">
     <div class="club-card reveal">
       <div class="club-photo"><img src="club1.jpg" alt="Club new member recruitment"></div>
@@ -566,13 +573,21 @@ footer span { color:var(--nc); }
       <p class="club-title">Navy Anchorage College Visit</p>
       <p class="club-desc">Visited Navy Anchorage College for our club's event idea challenge &mdash; pictured with the college principal sir.</p>
     </div>
+    <div class="club-card reveal" style="transition-delay:.2s">
+      <div class="club-photo club-slider">
+        <img src="jlpt1.jpg" alt="JLPT exam duty volunteer team" class="slide">
+        <img src="jlpt2.jpg" alt="JLPT exam duty volunteers in action" class="slide">
+      </div>
+      <p class="club-title">JLPT Exam Duty &mdash; Volunteer</p>
+      <p class="club-desc">Served as a JLPT (Japanese Language Proficiency Test) exam duty volunteer, helping with exam day operations and supporting test takers.</p>
+    </div>
     </div>
 </section>
 
 <!-- UNIVERSITY PROGRAM -->
 <section class="sec" id="program">
-  <div class="sec-label">06 &mdash; university program</div>
-  <h2 class="sec-title">University Program</h2>
+  <div class="sec-label">06 &mdash; university activities</div>
+  <h2 class="sec-title">University Activities</h2>
   <div class="club-grid">
     <div class="club-card reveal">
       <div class="club-photo"><img src="conf1.jpg" alt="ICReaST inaugural session at campus"></div>
@@ -583,6 +598,11 @@ footer span { color:var(--nc); }
       <div class="club-photo"><img src="conf2.jpg" alt="With the university's former Vice-Chancellor"></div>
       <p class="club-title">With Our Former Vice-Chancellor</p>
       <p class="club-desc">A memorable moment with our university's previous Vice-Chancellor during the conference.</p>
+    </div>
+    <div class="club-card reveal" style="transition-delay:.2s">
+      <div class="club-photo"><img src="poster.jpg" alt="Poster presentation on population growth and inflation"></div>
+      <p class="club-title">Population Growth And Inflation: The Impact Of Overpopulation On Goods Price In Bangladesh</p>
+      <p class="club-desc">This research study investigates how overpopulation and rapid population growth drive inflation and increase the prices of goods in Bangladesh, utilizing a mixed-methods approach to analyze demographic pressures, supply constraints, and economic impacts.</p>
     </div>
   </div>
 </section>
