@@ -171,6 +171,16 @@ nav {
 .faculty-note-icon { font-size:1.4rem; flex-shrink:0; margin-top:2px; }
 .faculty-note-text { font-size:0.85rem; color:var(--ts); line-height:1.75; }
 .faculty-note-text strong { color:var(--tp); font-weight:500; }
+/* CLUBS & CONFERENCE */
+.club-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.5rem; }
+.club-card { background:var(--gb); border:1px solid var(--gbd); border-radius:16px; padding:1.2rem; transition:all 0.3s; }
+.club-card:hover { border-color:rgba(0,245,212,0.3); transform:translateY(-4px); box-shadow:0 20px 50px rgba(0,0,0,0.4); }
+.club-photo { width:100%; aspect-ratio:4/3; border-radius:12px; overflow:hidden; border:1px solid var(--gbd); margin-bottom:1rem; background:var(--gb); }
+.club-photo img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.4s; }
+.club-card:hover .club-photo img { transform:scale(1.05); }
+.club-title { font-family:'Syne',sans-serif; font-size:0.95rem; font-weight:700; color:var(--tp); margin-bottom:0.35rem; }
+.club-desc { font-size:0.8rem; color:var(--ts); line-height:1.65; }
+.conference-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1.5rem; }
 /* CONTACT */
 .contact-inner { max-width:640px; margin:0 auto; text-align:center; }
 .contact-links { display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin:2rem 0; }
@@ -246,6 +256,7 @@ footer span { color:var(--nc); }
   .about-grid,.exp-grid,.form-row { grid-template-columns:1fr; }
   .about-photo-wrap { max-width:320px; margin:0 auto 0.5rem; }
   .proj-featured { grid-template-columns:1fr; }
+  .conference-grid { grid-template-columns:1fr; }
 }
 </style>
 </head>
@@ -261,6 +272,7 @@ footer span { color:var(--nc); }
     <li><a href="#skills">skills</a></li>
     <li><a href="#projects">projects</a></li>
     <li><a href="#experience">experience</a></li>
+    <li><a href="#clubs">clubs</a></li>
     <li><a href="#contact">contact</a></li>
   </ul>
 </nav>
@@ -527,6 +539,22 @@ footer span { color:var(--nc); }
     </div>
   </div>
 
+  <div class="reveal">
+    <p class="skill-group-title">Conference &amp; Events &mdash; ICReaST</p>
+    <div class="conference-grid">
+      <div class="club-card">
+        <div class="club-photo"><img src="conf1.jpg" alt="ICReaST inaugural session at campus"></div>
+        <p class="club-title">ICReaST Inaugural Ceremony</p>
+        <p class="club-desc">Attended the opening ceremony of the international conference held at our campus.</p>
+      </div>
+      <div class="club-card">
+        <div class="club-photo"><img src="conf2.jpg" alt="With the university's former Vice-Chancellor"></div>
+        <p class="club-title">With Our Former Vice-Chancellor</p>
+        <p class="club-desc">A memorable moment with our university's previous Vice-Chancellor during the conference.</p>
+      </div>
+    </div>
+  </div>
+
   <div class="faculty-note reveal">
     <span class="faculty-note-icon">&#128218;</span>
     <p class="faculty-note-text">
@@ -538,10 +566,33 @@ footer span { color:var(--nc); }
 
 </section>
 
+<!-- CLUB ACTIVITIES -->
+<section class="sec" id="clubs">
+  <div class="sec-label">05 &mdash; club activities</div>
+  <h2 class="sec-title">Club Activities</h2>
+  <div class="club-grid">
+    <div class="club-card reveal">
+      <div class="club-photo"><img src="club1.jpg" alt="Club new member recruitment"></div>
+      <p class="club-title">New Member Recruitment</p>
+      <p class="club-desc">Helped during our club's new member recruitment period, welcoming and onboarding fresh members into the club.</p>
+    </div>
+    <div class="club-card reveal" style="transition-delay:.1s">
+      <div class="club-photo"><img src="club2.jpg" alt="Visiting Navy Anchorage College, pictured with the principal"></div>
+      <p class="club-title">Navy Anchorage College Visit</p>
+      <p class="club-desc">Visited Navy Anchorage College for our club's event idea challenge &mdash; pictured with the college principal sir.</p>
+    </div>
+    <div class="club-card reveal" style="transition-delay:.2s">
+      <div class="club-photo"><img src="club3.jpg" alt="Volunteer duty at a club program"></div>
+      <p class="club-title">Program Volunteer Duty</p>
+      <p class="club-desc">Served volunteer duty during a club program, supporting event operations and on-ground coordination.</p>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="sec" id="contact">
   <div class="contact-inner reveal">
-    <div class="sec-label" style="justify-content:center">05 &mdash; contact</div>
+    <div class="sec-label" style="justify-content:center">06 &mdash; contact</div>
     <h2 class="sec-title" style="text-align:center">Let's Connect</h2>
     <p style="color:var(--ts);font-size:0.95rem;line-height:1.75;text-align:center;">
       Have an exciting project idea or constructive suggestion? Reach out directly or drop a message below &mdash; I read everything.
