@@ -185,6 +185,8 @@ nav {
   .slide:nth-child(1) { animation-name:slideFade1; }
   @keyframes slideFade1 { 0%,45% {opacity:1} 55%,95% {opacity:0} 100% {opacity:1} }
   @keyframes slideFade2 { 0%,45% {opacity:0} 55%,95% {opacity:1} 100% {opacity:0} }
+  .cert-frame { aspect-ratio:3/2; }
+  .cert-frame img { object-position:center; }
 .club-title { font-family:'Syne',sans-serif; font-size:0.95rem; font-weight:700; color:var(--tp); margin-bottom:0.35rem; }
 .club-desc { font-size:0.8rem; color:var(--ts); line-height:1.65; }
 .conference-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1.5rem; }
@@ -281,6 +283,7 @@ footer span { color:var(--nc); }
     <li><a href="#experience">experience</a></li>
     <li><a href="#clubs">extracurricular</a></li>
     <li><a href="#program">university</a></li>
+    <li><a href="#achievements">achievements</a></li>
     <li><a href="#contact">contact</a></li>
   </ul>
 </nav>
@@ -628,10 +631,28 @@ footer span { color:var(--nc); }
   </div>
 </section>
 
+<!-- ACHIEVEMENTS -->
+<section class="sec" id="achievements">
+  <div class="sec-label">07 &mdash; achievements</div>
+  <h2 class="sec-title">Achievements &amp; Certificates</h2>
+  <div class="club-grid">
+    <div class="club-card reveal">
+      <div class="club-photo cert-frame"><img src="daraz_cert.jpg" alt="Daraz Fan Club appreciation certificate for moderator"></div>
+      <p class="club-title">Daraz Fan Club &amp; Fan Base &mdash; Appreciation Certificate</p>
+      <p class="club-desc">Awarded an appreciation certificate for operating the Daraz Fan Club and fan base community in the best way, serving as a Moderator.</p>
+    </div>
+    <div class="club-card reveal" style="transition-delay:.1s">
+      <div class="club-photo cert-frame"><img src="somoy_cert.jpg" alt="Somoy Club ideas challenge certificate for volunteer"></div>
+      <p class="club-title">Somoy Club Ideas Challenge &mdash; Volunteer Certificate</p>
+      <p class="club-desc">Recognized by the Somoy Club with a certificate for contributing as a volunteer in the club's ideas challenge.</p>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="sec" id="contact">
   <div class="contact-inner reveal">
-    <div class="sec-label" style="justify-content:center">07 &mdash; contact</div>
+    <div class="sec-label" style="justify-content:center">08 &mdash; contact</div>
     <h2 class="sec-title" style="text-align:center">Let's Connect</h2>
     <p style="color:var(--ts);font-size:0.95rem;line-height:1.75;text-align:center;">
       Have an exciting project idea or constructive suggestion? Reach out directly or drop a message below &mdash; I read everything.
